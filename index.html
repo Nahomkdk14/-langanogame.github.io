@@ -110,24 +110,49 @@
       <div class="question" id="100">100</div>
     </div>
     <div class="questionBox" id="box">
-         <div id="exit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-         </div>
-        <div class="wrap">
-            <div id="Q">
-            </div>
-            <button class="Show" id="shw" onclick="document.getElementById(`A`).style.display=`flex`; document.querySelector(`div.color`).style.animationPlayState = 'paused'; ">
-                Show Answer
-            </button>
-            <div id="A">
-
-            </div>
-            <div class="progress">
-            <div class="color"></div>
-    </div>
-        </div>
+      <div id="exit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </div>
+      <!-- <div class="wrap"> -->
+        <div class="disquestion">
+          <div id="Q"></div>
+          <button
+            class="Show"
+            id="shw"
+            onclick="
+            document.getElementById(`A`).style.display=`flex`; document.querySelector(`div.color`).style.animationPlayState = 'paused'; 
+            // let x = 0.85 * window.innerHeight;
+            // if (+(document.getElementById(`box`).style.height) < x) {
+            //   let y = x - (+ document.getElementById(`box`).style.height);
+            //    document.getElementById(`box`).style.padding= `${y/4}px 0px ${y/4}px 0px`
+            // } else {
+            // }
+            // "
+          >
+            Show Answer
+          </button>
+          <div id="A"></div>
+          <div class="progress">
+            <div class="color"></div>
+          </div>
+        </div>
+      <!-- </div> -->
     </div>
+    <!-- </div> -->
   </body>
   <script src="main.js"></script>
 </html>
