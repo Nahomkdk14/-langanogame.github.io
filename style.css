@@ -1,14 +1,20 @@
 * {
+  margin: 0px;
   box-sizing: border-box;
+  transition: all 0.5s;
+  overflow: hidden;
+  text-align: center;
 }
+
 body {
-  font-family: monospace;
-  font-size: 20px;
   background: linear-gradient(to right, #f16529, #e44d26);
+  font-family: monospace;
+  height: 100vh;
+  font-size: 20px;
 }
 .wrapper {
-  width: 900px;
-  height: 650px;
+  width: 98vw;
+  height: 98vh;
   position: absolute;
   display: grid;
   grid-template-rows: repeat(10, 1fr);
@@ -17,7 +23,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 15px;
+  padding: 25px;
   border: 2px solid wheat;
   border-radius: 20px;
 }
@@ -25,7 +31,6 @@ body {
   background: #ffffff33;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: center;
@@ -38,10 +43,11 @@ body {
 }
 .questionBox {
   font-size: 30px;
-  width: 750px;
-  height: 425px;
-  background-color: white;
-  position: absolute;
+  width: 900px;
+  min-height: 85vh;
+  flex-direction: column;
+
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -54,21 +60,30 @@ body {
   display: none;
 }
 #exit {
-  float: right;
+  margin-left: 96%;
+  height: 24px;
+  /* position: absolute; */
+  /* top: 4%; */
+  /* margin-bottom: 40%; */
   cursor: pointer;
-  margin-right: 2px;
+  /* margin-bottom: 100%; */
 }
-.wrap {
+.disquestion {
+  height: (100%-24px);
   width: 100%;
-  padding: 70px 40px 40px 40px;
-  /* height: 100%; */
-  gap: 40px;
-  flex-direction: column;
+  flex-grow: 1;
+  padding: 0px 0px 70px 0px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
+  flex-direction: column;
 }
+.disquestion > :not(.progress, .Show) {
+  padding: 0px 40px 0px 10px;
+}
+
 .Show {
+  margin-bottom: 30px;
   cursor: pointer;
   padding: 10px;
   background: #24110dd9;
@@ -80,16 +95,17 @@ body {
   border: 1px solid rgba(227, 76, 38, 0.3);
 }
 #A {
+  /* margin-bottom: 200px; */
   display: none;
 }
 .progress {
-  margin-top: 9px;
-  position: relative;
+  margin-top: 20px;
+  /* position: relative; */
   height: 30px;
   width: 470px;
   border: 10px solid #f4a261;
   border-radius: 15px;
-  position: absolute;
+  /* position: absolute; */
   top: 80%;
 }
 .progress .color {
@@ -116,7 +132,11 @@ body {
     width: 100%;
   }
 }
-#Q{
+#Q {
   text-align: center;
-
+  margin-bottom: 30px;
+}
+.imgquest{
+  border-radius: 12px;
+  width: 400px;
 }
